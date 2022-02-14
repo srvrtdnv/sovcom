@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+zuul:
+  routes:
+    email-service:
+      path: /email/**
+      serviceId: email-service
+    push-service:
+      path: /push/**
+      serviceId: push-service
+    sms-service:
+      path: /sms/**
+      serviceId: sms-service

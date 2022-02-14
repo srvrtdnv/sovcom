@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: sms-service
+  cloud:
+    config:
+#      enabled: false
+      uri: http://config:8085

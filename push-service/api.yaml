@@ -1,0 +1,25 @@
+swagger: "2.0"
+info:
+  title: апи сервиса
+  description: Title
+  version: 1.0.0
+paths:
+  /send:
+    post:
+      tags:
+        - "push"
+      summary: "Отправить push-уведомление"
+      description: "Ендпоинт для отправки push-уведомления"
+      operationId: "sendPush"
+      consumes:
+        - "text/plain"
+      parameters:
+        - name: "body"
+          in: "body"
+          description: "Сообщение"
+          required: true
+          schema:
+            type: "string"
+      responses:
+        200:
+          description: "Отправка успешна"
